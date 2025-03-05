@@ -8,13 +8,13 @@ bot.on("/start", (msg) => {
 
   // Створюємо inline меню
   const menu = {
-    reply_markup: {
+    reply_markup: JSON.stringify({
       inline_keyboard: [
         [{ text: "📋 Переглянути меню", callback_data: "menu" }],
         [{ text: "ℹ️ Дізнатися більше", callback_data: "info" }],
         [{ text: "⏳ Запустити таймер", callback_data: "timer" }],
       ],
-    },
+    }),
   };
 
   // Відправляємо повідомлення з меню
