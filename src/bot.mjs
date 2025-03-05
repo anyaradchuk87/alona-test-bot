@@ -1,6 +1,14 @@
 import TeleBot from "telebot";
+dotenv.config();
 
-const bot = new TeleBot(process.env.TELEGRAM_BOT_TOKEN);
+// const bot = new TeleBot(process.env.TELEGRAM_BOT_TOKEN);
+const bot = new TeleBot({
+  token: process.env.TELEGRAM_BOT_TOKEN,
+  webhook: {
+    url: process.env.SERVER_URL, // URL твого сервера на Vercel
+    port: process.env.PORT || 3000,
+  },
+});
 
 // bot.on("text", (msg) => msg.reply.text(`Ви написали: ${msg.text}`));
 bot.on("/start", (msg) => {
