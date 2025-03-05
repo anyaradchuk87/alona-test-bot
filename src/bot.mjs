@@ -1,5 +1,5 @@
 import TeleBot from "telebot";
-dotenv.config();
+// dotenv.config();
 
 // const bot = new TeleBot(process.env.TELEGRAM_BOT_TOKEN);
 const bot = new TeleBot({
