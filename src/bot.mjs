@@ -47,5 +47,6 @@ bot.on("/start", (msg) => {
 //   // Відповідаємо на callback-запит, щоб закрити меню
 //   bot.answerCallbackQuery(query.id);
 // });
+//
 
 export default bot;
